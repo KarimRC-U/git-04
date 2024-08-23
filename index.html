@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos JS</title>
+    <title>Fundamentos JS - Carrito Objeto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <main class="container mt-5">
+        <div class="row text-center">
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresilla</h5>
+                        <p class="lead">$300.00</p>
+                        <button 
+                        class="btn btn-primary btn-sm fruta"
+                        data-fruta="fresilla"
+                        data-precio="300"
+                        >
+                        agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Platano</h5>
+                        <p class="lead">$200.00</p>
+                        <button 
+                        class="btn btn-primary btn-sm fruta"
+                        data-fruta="platano"
+                        data-precio="200"
+                        >
+                        agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzana</h5>
+                        <p class="lead">$400.00</p>
+                        <button 
+                        class="btn btn-primary btn-sm fruta"
+                        data-fruta="manzana"
+                        data-precio="400"
+                        >
+                        agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section>
+        <main class="container mt-3">
+            <ul class="list-group" id="carrito"></ul>
+        </main>
+    </section>
+
+    <footer class="container mt-3" id="footer">
+        <template id="templateFooter">
+            <div class="card">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <p class="lead-mb-0">TOTAL: $<span>500</span></p>
+                    <button class="btn btn-outline-primary fin">
+                        Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </template>
+    </footer>
     
+    <template id="template">
+            <li class="list-group text-uppercase bg-secondary text-white">
+                <span class="badge bg-primary rounded-pill align-middle">
+                    10
+                </span>
+                <span class="lead align-middle">
+                    Item
+                </span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-item-center">
+                <div>
+                    <p class="lead mb-0">
+                        Total: $<span>200</span>
+                    </p>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-success">Agregar</button>
+                    <button class="btn btn-sm btn-danger">Quitar</button>
+                </div>
+            </li>
+    </template>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
